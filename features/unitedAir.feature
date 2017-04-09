@@ -32,20 +32,3 @@ Feature: United Airlines Book Travel Form
 #    When I click the search button
 #
 #    Then I should see the results
-
-
-#    Scenario: Searching for a flight using flexible depart and arrival dates
-#    Given I am on the united website
-#
-#    When I enter the origin airport code "pdx"
-#    When I enter the destination airport code "lax"
-#    When I indicate my dates are flexible
-##    When I enter a departing date "Dec 24, 2017"
-##    When I enter a returning date
-#    When I specify the number of passengers
-#    When I specify the class
-#    When I indicate I want award travel
-#    When I indicate nonstop travel
-#    When I click the search button
-#
-#    Then I should see the results
