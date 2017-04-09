@@ -34,28 +34,46 @@ When(/^I enter a departing date "([^"]*)"$/) do |depDate|
   fill_in('DepartDate',:with => depDate)
 end
 
-When(/^I enter a returning date$/) do
-  pending
+When(/^I enter a returning date "([^"]*)"$/) do |retDate|
+  fill_in('ReturnDate',:with => retDate)
 end
 
 When(/^I specify the number of passengers$/) do
-  pending
+  click_link("travelers-selector")
 end
 
-When(/^I specify the class$/) do
-  pending
+When(/^I add (\d+) adults$/) do |adults|
+  # Had to convert adults to an int value using the .to_i
+  for i in 1..adults.to_i
+    #ugly xpath.
+    find('//*[@id="travelers-select"]/div/ul/li[1]/div/a[2]').click
+  end
 end
+
+# The options for the cabinType will change based on whether the Award Travel is checked
+When(/^I select "([^"]*)" class$/) do |cabinType|
+  find('//*[@id="uniform-cabinType"]').click
+
+  if(cabinType == "Business or First")
+    find('//*[@id="cabinType"]/option[2]').select_option
+  end
+
+  if(cabinType == "Economy")
+    find('//*[@id="cabinType"]/option[1]').select_option
+  end
+end
+
 
 When(/^I indicate I want award travel$/) do
-  pending
+  find('//*[@id="uniform-AwardTravel"]').click
 end
 
 When(/^I indicate nonstop travel$/) do
-  pending
+  find('//*[@id="uniform-NonStopOnly"]').click
 end
 
 When(/^I click the search button$/) do
-  pending
+  click_button("flightBookingSubmit")
 end
 
 
@@ -64,4 +82,5 @@ end
 Then(/^I should see the results$/) do
   page.has_css?('div#res li')
 end
+
 
