@@ -10,13 +10,14 @@ Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
+####GIVEN###
 Given(/^I am on the united website$/) do
   visit('http://www.united.com')
 end
 
 
 
-
+####WHEN###
 When(/^I enter the origin airport code "([^"]*)"$/) do |orig|
   fill_in('Origin',:with => orig)
 end
@@ -38,7 +39,7 @@ When(/^I enter a returning date "([^"]*)"$/) do |retDate|
   fill_in('ReturnDate',:with => retDate)
 end
 
-When(/^I specify the number of passengers$/) do
+When(/^I specify the number of travelers/) do
   click_link("travelers-selector")
 end
 
@@ -47,6 +48,13 @@ When(/^I add (\d+) adults$/) do |adults|
   for i in 1..adults.to_i
     #ugly xpath.
     find('//*[@id="travelers-select"]/div/ul/li[1]/div/a[2]').click
+  end
+end
+
+When(/^I remove (\d+) adults$/) do |adults|
+  for i in adults.to_i..1
+    #ugly xpath.
+    find('//*[@id="travelers-select"]/div/ul/li[1]/div/a[1]').click
   end
 end
 
@@ -63,7 +71,6 @@ When(/^I select "([^"]*)" class$/) do |cabinType|
   end
 end
 
-
 When(/^I indicate I want award travel$/) do
   find('//*[@id="uniform-AwardTravel"]').click
 end
@@ -77,10 +84,26 @@ When(/^I click the search button$/) do
 end
 
 
-
-
-Then(/^I should see the results$/) do
-  page.has_css?('div#res li')
+####THEN###
+#Check for the overlay to be visible then hidden
+Then(/^I should see a processing overlay$/) do
+  find('//*[@id="fl-results-loader-full"]', visible: true).visible?
+  find('//*[@id="fl-results-loader-full"]', visible: false).visible?
+  sleep(3)
 end
 
+Then(/^I should see "([^"]*)" as the departing airport$/) do |orig|
+  page.assert_selector(:xpath, './/*[@id="fl-search-segment-header-wrap"]/div[3]/h1/div[2]//*[contains(text(),"' + orig + '")]')
+end
 
+Then(/^I should see "([^"]*)" as the arriving airport$/) do |dest|
+  page.assert_selector(:xpath, './/*[@id="fl-search-segment-header-wrap"]/div[3]/h1/div[4]//*[contains(text(),"' + dest + '")]')
+end
+
+Then(/^I should see "([^"]*)" as the departing date$/) do |deptDate|
+  page.assert_selector(:xpath, './/*[@id="fl-search-segment-header-wrap"]/div[3]/h1/div[1]//*[contains(text(),"' + deptDate + '")]')
+end
+
+Then(/^I should see an error about not having any travelers$/) do
+  page.assert_selector(:xpath, './/*[@id="main-content"]/div[1]/ul//*[contains(text(),"Please select the number of travelers.")]')
+end

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f00cba18-196b-4dae-9a4f-36a151ca7837" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestSpec.pages" afterPath="$PROJECT_DIR$/TestSpec.pages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb" afterPath="$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/unitedAir.feature" afterPath="$PROJECT_DIR$/features/unitedAir.feature" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,21 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="unitedAir.feature" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unitedAir.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/unitedAir.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unitedAir-step.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="unitedAir-step.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="88" lean-forward="false" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
+            <state relative-caret-position="670">
+              <caret line="107" column="125" lean-forward="false" selection-start-line="107" selection-start-column="87" selection-end-line="107" selection-end-column="125" />
               <folding />
             </state>
           </provider>
@@ -46,6 +47,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>award</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -56,8 +62,8 @@
         <option value="$PROJECT_DIR$/features/google.feature" />
         <option value="$PROJECT_DIR$/features/spec_helper.rb" />
         <option value="$PROJECT_DIR$/features/support/env.rb" />
-        <option value="$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb" />
         <option value="$PROJECT_DIR$/features/unitedAir.feature" />
+        <option value="$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb" />
       </list>
     </option>
   </component>
@@ -331,15 +337,15 @@
       <option name="presentableId" value="Default" />
       <updated>1491674438160</updated>
       <workItem from="1491674439966" duration="2668000" />
-      <workItem from="1491680461947" duration="10750000" />
+      <workItem from="1491680461947" duration="17018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13418000" />
+    <option name="totallyTimeSpent" value="19686000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="872" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="872" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -412,18 +418,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb">
+    <entry file="file://$PROJECT_DIR$/features/unitedAir.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="88" lean-forward="false" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
+        <state relative-caret-position="465">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/unitedAir.feature">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/unitedAir-step.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="670">
+          <caret line="107" column="125" lean-forward="false" selection-start-line="107" selection-start-column="87" selection-end-line="107" selection-end-column="125" />
           <folding />
         </state>
       </provider>
