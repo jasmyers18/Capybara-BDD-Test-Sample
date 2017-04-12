@@ -107,7 +107,3 @@ end
 Then(/^I should see an error about not having any travelers$/) do
   page.assert_selector(:xpath, './/*[@id="main-content"]/div[1]/ul//*[contains(text(),"Please select the number of travelers.")]')
 end
-
-When(/^I do something "([^"]*)"$/) do |bob|
-  pending
-end
