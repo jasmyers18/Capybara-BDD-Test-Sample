@@ -89,7 +89,7 @@ end
 Then(/^I should see a processing overlay$/) do
   find('//*[@id="fl-results-loader-full"]', visible: true).visible?
   find('//*[@id="fl-results-loader-full"]', visible: false).visible?
-  sleep(3)
+  sleep(6)
 end
 
 Then(/^I should see "([^"]*)" as the departing airport$/) do |orig|
@@ -106,4 +106,8 @@ end
 
 Then(/^I should see an error about not having any travelers$/) do
   page.assert_selector(:xpath, './/*[@id="main-content"]/div[1]/ul//*[contains(text(),"Please select the number of travelers.")]')
+end
+
+When(/^I do something "([^"]*)"$/) do |bob|
+  pending
 end

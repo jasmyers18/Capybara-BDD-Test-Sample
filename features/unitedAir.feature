@@ -30,5 +30,6 @@ Feature: United Airlines Book Travel Form
     When I specify the number of travelers
     When I remove 1 adults
     When I click the search button
+    When I do something "Hi"
 
     Then I should see an error about not having any travelers
